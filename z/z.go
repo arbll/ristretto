@@ -54,3 +54,10 @@ func KeyToHash(key interface{}) (uint64, uint64) {
 		panic("Key type not supported")
 	}
 }
+
+func KeyToHashBytes(k []byte) (uint64, uint64) {
+	if k == nil {
+		return 0, 0
+	}
+	return MemHash(k), xxhash.Sum64(k)
+}

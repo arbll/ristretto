@@ -25,7 +25,7 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/dgraph-io/ristretto/z"
+	"github.com/arbll/ristretto/z"
 )
 
 const (
